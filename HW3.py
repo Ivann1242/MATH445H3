@@ -20,7 +20,9 @@ hhats = []
 for N in Ns:
     seq = sample_seq(N)
     hhats.append(Hhat_bits(seq))
-    c1 = (seq==1).sum(); c0 = (seq==0).sum(); cm1 = (seq==-1).sum()
+    c1 = (seq==1).sum()
+    c0 = (seq==0).sum() 
+    cm1 = (seq==-1).sum()
     print(f"N={N:4d} , distribution: 1:{c1:4d} 0:{c0:4d} -1:{cm1:4d} , H'={hhats[-1]:.4f} bits")
 
 H_true = 1.5 
